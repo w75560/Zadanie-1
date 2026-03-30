@@ -1,5 +1,6 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    body {
+    font-family: 'Inter', sans-serif;
     background-color: #f0fdf4;
     color: #333333;
     line-height: 1.6;
