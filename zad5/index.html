@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>CV - Ömer Faruk Künç</title>
-    <link rel="icon" href="data:,">
     <link id="css-link" rel="stylesheet" href="red.css">
 </head>
 <body>
@@ -74,6 +73,41 @@
                 <li><strong>Computer Vision Classifier:</strong> Aplikacja rozpoznająca obiekty przy użyciu sieci neuronowych.</li>
                 <li><strong>Sentimental Analysis Tool:</strong> Analiza emocji w tekstach z wykorzystaniem NLP.</li>
             </ul>
+        </section>
+        <section id="sekcja-kontakt">
+            <h2>Kontakt</h2>
+            <form id="formularzKontaktowy" novalidate style="max-width: 400px; margin-top: 20px;">
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="imie">Imię:</label><br>
+                    <input type="text" id="imie" name="imie" style="width: 100%; padding: 5px;">
+                    <p id="bladImie" style="color: red; font-size: 13px; display: none; margin-top: 5px;"></p>
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label for="nazwisko">Nazwisko:</label><br>
+                    <input type="text" id="nazwisko" name="nazwisko" style="width: 100%; padding: 5px;">
+                    <p id="bladNazwisko" style="color: red; font-size: 13px; display: none; margin-top: 5px;"></p>
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" name="email" style="width: 100%; padding: 5px;">
+                    <p id="bladEmail" style="color: red; font-size: 13px; display: none; margin-top: 5px;"></p>
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label for="wiadomosc">Wiadomość:</label><br>
+                    <textarea id="wiadomosc" name="wiadomosc" rows="4" style="width: 100%; padding: 5px;"></textarea>
+                    <p id="bladWiadomosc" style="color: red; font-size: 13px; display: none; margin-top: 5px;"></p>
+                </div>
+
+                <button type="submit" style="padding: 10px 20px; cursor: pointer;">Wyślij</button>
+            </form>
+            
+            <p id="komunikatSukces" style="color: green; font-weight: bold; display: none; margin-top: 15px;">
+                Wiadomość została wysłana pomyślnie!
+            </p>
         </section>
     </main>
 
