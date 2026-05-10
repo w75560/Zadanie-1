@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function() {
         ladujNotatki();
     }
 });
-// --- ZADANIE 8: Komunikacja z serwerem 
+// --- ZADANIE 8: Komunikacja z serwerem (POST do JSONPlaceholder) ---
 // Numer albumu: 75560
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -217,12 +217,12 @@ document.addEventListener("DOMContentLoaded", function() {
         formularz.addEventListener("submit", function(event) {
             event.preventDefault(); // Strona się nie przeładuje po kliknięciu Wyślij
 
-            //  Pobieranie danych z formularza
+            // 1. Pobieranie danych z formularza
             const imie = document.getElementById("imie").value;
             const email = document.getElementById("email").value;
             const wiadomosc = document.getElementById("wiadomosc").value;
 
-            //  Tworzenie paczki danych 
+            // 2. Tworzenie paczki danych (JSON)
             const daneDoWyslania = {
                 name: imie,
                 email: email,
@@ -230,10 +230,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 timestamp: new Date().toISOString()
             };
 
-            //  Publiczne API zalecone przez wykładowcę
-            const backendURL = "https://reqres.in/api/users";
+            // 3. Publiczne API zalecone przez wykładowcę (JSONPlaceholder - w 100% darmowe)
+            const backendURL = "https://jsonplaceholder.typicode.com/posts";
 
-            //  Wysłanie danych (metoda POST)
+            // 4. Wysłanie danych (metoda POST)
             fetch(backendURL, {
                 method: "POST",
                 headers: {
@@ -243,14 +243,14 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .then(response => response.json())
             .then(data => {
-                // Wypisanie w konsoli
+                // Wypisanie w konsoli, aby pokazać prowadzącemu na wideo
                 console.log("=== ZADANIE 8: SUKCES ===");
-                console.log("Serwer Reqres.in otrzymał dane:", data);
+                console.log("Serwer JSONPlaceholder otrzymał dane:", data);
                 
                 // Alert dla użytkownika
-                alert("Sukces! Formularz został wysłany. Serwer (Reqres.in) nadał ID zgłoszenia: " + data.id);
+                alert("Sukces! Formularz został wysłany. Serwer nadał ID zgłoszenia: " + data.id);
                 
-                formularz.reset(); 
+                formularz.reset(); // Czyszczenie formularza po wysłaniu
             })
             .catch(error => {
                 console.error("Błąd podczas wysyłania:", error);
