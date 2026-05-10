@@ -1,0 +1,23 @@
+{
+  "umiejetnosci": [
+    "Języki programowania: Python, JavaScript, TypeScript",
+    "Sztuczna Inteligencja: Podstawy Machine Learning",
+    "Integracja API: OpenAI, HuggingFace",
+    "Narzędzia: Git, GitHub, Docker",
+    "Języki: Turecki (ojczysty), Angielski (C1), Polski (podstawowy)"
+  ],
+  "projekty": [
+    {
+      "nazwa": "AI Chatbot Assistant",
+      "opis": "Model językowy (LLM) zintegrowany z interfejsem webowym."
+    },
+    {
+      "nazwa": "Computer Vision Classifier",
+      "opis": "Aplikacja rozpoznająca obiekty przy użyciu sieci neuronowych."
+    },
+    {
+      "nazwa": "Sentimental Analysis Tool",
+      "opis": "Analiza emocji w tekstach z wykorzystaniem NLP."
+    }
+  ]
+}
