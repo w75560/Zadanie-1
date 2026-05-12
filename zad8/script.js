@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 timestamp: new Date().toISOString()
             };
 
-            // 3. Publiczne API zalecone przez wykładowcę (JSONPlaceholder - w 100% darmowe)
+            // 3. Publiczne API zalecone przez wykładowcę 
             const backendURL = "https://jsonplaceholder.typicode.com/posts";
 
             // 4. Wysłanie danych (metoda POST)
@@ -243,14 +243,15 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .then(response => response.json())
             .then(data => {
-                // Wypisanie w konsoli, aby pokazać prowadzącemu na wideo
+                // Wypisanie w konsoli, aby pokazać 
+        
                 console.log("=== ZADANIE 8: SUKCES ===");
                 console.log("Serwer JSONPlaceholder otrzymał dane:", data);
                 
                 // Alert dla użytkownika
                 alert("Sukces! Formularz został wysłany. Serwer nadał ID zgłoszenia: " + data.id);
                 
-                formularz.reset(); // Czyszczenie formularza po wysłaniu
+                formularz.reset(); 
             })
             .catch(error => {
                 console.error("Błąd podczas wysyłania:", error);
